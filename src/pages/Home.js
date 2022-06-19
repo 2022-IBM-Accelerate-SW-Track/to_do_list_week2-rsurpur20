@@ -29,7 +29,8 @@ class Home extends Component {
     // dealing with a larger data sensitive project.
  
     
-    if ((this.state.todos).find(t => t.content.trim().toLowerCase() === todo.content.trim())){
+    if (this.state.todos.find(t => t.content === todo.content))
+    {
       return;
     } else {
       todo.id = Math.random();
